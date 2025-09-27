@@ -1,12 +1,12 @@
 "use client";
 
-import { LayoutDashboard, LucideIcon, } from "lucide-react";
+import { LayoutDashboard, LucideIcon, TvMinimalPlay, Ticket, UsersRound, CircleUserRound, LogOut } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
 const iconMap: { [key: string]: LucideIcon } = {
-  Dashboard: LayoutDashboard,
+  Dashboard: LayoutDashboard, TvMinimalPlay, Ticket, UsersRound, CircleUserRound
 };
 
 interface NavItem {
@@ -17,10 +17,10 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { name: "Dashboard", href: "/dashboard", iconName: "Dashboard" },
-  { name: "Anydesk", href: "/anydesk", iconName: "Dashboard" },
-  { name: "Chamados", href: "/chamados", iconName: "Dashboard" },
-  { name: "Clientes", href: "/clientes", iconName: "Dashboard" },
-  { name: "Perfil", href: "/perfil", iconName: "Dashboard" },
+  { name: "Anydesk", href: "/anydesk", iconName: "TvMinimalPlay" },
+  { name: "Chamados", href: "/chamados", iconName: "Ticket" },
+  { name: "Clientes", href: "/clientes", iconName: "UsersRound" },
+  { name: "Perfil", href: "/perfil", iconName: "CircleUserRound" },
 ];
 
 export function Header() {
@@ -63,7 +63,7 @@ export function Header() {
       </div>
       <div>
         <button>
-          <LayoutDashboard />
+          <LogOut className="text-[#F6F6F6] hover:bg-[#252F3D] transition ease-in-out rounded-md " />
         </button>
       </div>
     </header>
